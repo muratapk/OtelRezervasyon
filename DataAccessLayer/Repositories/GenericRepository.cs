@@ -11,10 +11,10 @@ namespace DataAccessLayer.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-         ApplicationDbContext _context=new ApplicationDbContext();
-        public GenericRepository()
+         private readonly ApplicationDbContext  _context;
+        public GenericRepository(ApplicationDbContext context)
         {
-           
+            _context = context;
         }
 
         public void Add(T entity)
