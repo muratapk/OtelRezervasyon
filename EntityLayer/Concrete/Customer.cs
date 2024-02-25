@@ -19,7 +19,7 @@ namespace EntityLayer.Concrete
         public string SubUrb { get; set; } = string.Empty;
         public int? PostCode { get; set; }
         public string PhoneNo { get; set; } = string.Empty;
-        [Key]
+      
         public string EmailAddress { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
 

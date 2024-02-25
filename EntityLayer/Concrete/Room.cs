@@ -12,13 +12,13 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int RoomId { get; set; }
-        [ForeignKey("RoomType")]
+        [ForeignKey("RoomTypeId")]
        
         public int? RoomTypeId { get; set; }
         public virtual RoomType? RoomType { get; set; }
         public string RoomImage { get; set; } = string.Empty;
         public string RoomDescription { get; set; } = string.Empty;
-        [ForeignKey("Hostel")]
+        [ForeignKey("HostelId")]
         public int? HostelId { get; set; }
         public virtual Hostel? Hostel { get; set; }
     }

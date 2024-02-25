@@ -12,10 +12,10 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int BookId { get; set; }
-        [ForeignKey("Customer")]
+        [ForeignKey("CustomerId")]
         public int CustomerId { get; set; }
         public virtual Customer? Customer { get; set; }
-        [ForeignKey("Room")]
+        [ForeignKey("RoomId")]
         public int RoomId { get; set; }
         public virtual Room? Room { get; set; }
         public DateTime BookingDate { get; set; }

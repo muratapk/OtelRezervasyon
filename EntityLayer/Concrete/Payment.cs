@@ -12,14 +12,14 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int PaymentId { get; set; }
-        [ForeignKey("Customer")]
-        public int CustomerId { get; set; }
+        [ForeignKey("CustomerId")]
+        public int? CustomerId { get; set; }
         public virtual Customer? Customer { get; set; }
 
-        [ForeignKey("Booking")]
-        public int BookingId { get; set; }
+        [ForeignKey("BookingId")]
+        public int? BookingId { get; set; }
         public virtual Booking? Booking {get;set;}
-        public int CreditCardNo { get; set; }
-        public int ExpireDate { get; set; }
+        public int? CreditCardNo { get; set; }
+        public int? ExpireDate { get; set; }
     }
 }
