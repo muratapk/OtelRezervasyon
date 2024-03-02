@@ -12,6 +12,8 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfRoomTypeDal : GenericRepository<RoomType>, IRoomTypeDal
     {
+        
+
         public EfRoomTypeDal(ApplicationDbContext context) : base(context)
         {
         }
