@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,39 @@ namespace BusinessLayer.Concrete
 {
     public class HostelManager : IHostelService
     {
+        //classın üzerine gel ctrl nokta bas consturctur oluştur
+        IHostelDal _HostelDal;
+
+        public HostelManager(IHostelDal HostelDal)
+        {
+            _HostelDal = HostelDal;
+        }
+
+        //bu servis vasıta ile direkt veritabanı bağlanmak bir tanımlama oluşturdum.
         public Hostel GetById(int id)
         {
-            throw new NotImplementedException();
+            return _HostelDal.Get(x=>x.HostelId== id);
+            //throw new NotImplementedException();
         }
 
         public void TAdd(Hostel Entity)
         {
-            throw new NotImplementedException();
+            _HostelDal.Add(Entity);
         }
 
         public void TDelete(Hostel Entity)
         {
-            throw new NotImplementedException();
+            _HostelDal.Delete(Entity);
         }
 
         public List<Hostel> TGetAll()
         {
-            throw new NotImplementedException();
+            return _HostelDal.GetAll();
         }
 
         public void TUpdate(Hostel Entity)
         {
-            throw new NotImplementedException();
+            _HostelDal.Update(Entity);
         }
     }
 }
