@@ -25,22 +25,22 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(Room Entity)
         {
-            throw new NotImplementedException();
+            _roomDal.Add(Entity);
         }
 
         public void TDelete(Room Entity)
         {
-            throw new NotImplementedException();
+            _roomDal.Delete(Entity);
         }
 
         public List<Room> TGetAll()
         {
-            throw new NotImplementedException();
+            return _roomDal.GetAll();
         }
 
         public void TUpdate(Room Entity)
         {
-            throw new NotImplementedException();
+            _roomDal.Update(Entity);
         }
     }
 }
