@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IRoomType:IGenericService<RoomType>
+    public interface IRoomTypeService:IGenericService<RoomType>
     {
     }
 }
