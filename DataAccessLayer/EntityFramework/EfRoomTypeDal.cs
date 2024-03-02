@@ -15,5 +15,6 @@ namespace DataAccessLayer.EntityFramework
         public EfRoomTypeDal(ApplicationDbContext context) : base(context)
         {
         }
+        //veri tabanı bağlantısı yapıldı
     }
 }
