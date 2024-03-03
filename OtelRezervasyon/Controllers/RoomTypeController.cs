@@ -6,7 +6,10 @@ namespace OtelRezervasyon.Controllers
 {
     public class RoomTypeController : Controller
     {
-        
+        RoomTypeManager Rtm = new RoomTypeManager(new EfRoomTypeDal());
+
+       
+
         public IActionResult Index()
         {
             return View();

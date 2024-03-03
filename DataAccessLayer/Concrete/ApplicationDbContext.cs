@@ -10,8 +10,12 @@ namespace DataAccessLayer.Concrete
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options):base(options)
+        //public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options):base(options)
+        //{
+        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer();
         }
         public DbSet<RoomType>? RoomTypes { get; set; }
         public DbSet<Booking>? Bookings { get; set; }
